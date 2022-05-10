@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proysistemasoperativos.TablaController">
+   <children>
+      <GridPane layoutX="59.0" layoutY="456.0" prefHeight="169.0" prefWidth="299.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="129.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtNombre" alignment="CENTER" GridPane.columnIndex="1" />
+            <Label text="Nombre" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Numero de control" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNoControl" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="comboCubre" onAction="#seleccion" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Label" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView layoutX="14.0" layoutY="61.0" prefHeight="368.0" prefWidth="503.0">
+        <columns>
+          <TableColumn prefWidth="83.0" text="No. Control" />
+          <TableColumn prefWidth="75.0" text="Nombre" />
+            <TableColumn prefWidth="88.0" text="Cubrebocas" />
+            <TableColumn prefWidth="74.0" text="Hora Llega" />
+            <TableColumn prefWidth="79.0" text="Hora Sale" />
+            <TableColumn prefWidth="89.0" text="Tiempo espera" />
+        </columns>
+      </TableView>
+      <Button alignment="CENTER" layoutX="572.0" layoutY="90.0" mnemonicParsing="false" onAction="#Insertar" prefHeight="50.0" prefWidth="100.0" text="Insertar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="572.0" layoutY="161.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="50.0" prefWidth="100.0" text="Limpiar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="23.0" layoutY="12.0" mnemonicParsing="false" onAction="#regresar" text="Atras" />
+
+       <Button alignment="CENTER" layoutX="572.0" layoutY="232.0" mnemonicParsing="false" onAction="#Salir" prefHeight="50.0" prefWidth="100.0" text="SACAR" textAlignment="CENTER" />
+      <GridPane layoutX="800.0" layoutY="100.0" prefHeight="600.0" prefWidth="400.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="803.0" AnchorPane.rightAnchor="102.0" AnchorPane.topAnchor="100.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fx:id="USIN6" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Circle fx:id="UCON1" fill="DODGERBLUE" radius="20.0" stroke="#ffffff00" strokeType="INSIDE" GridPane.rowIndex="1" />
+            <Circle fx:id="UCON2" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.rowIndex="2" />
+            <Circle fx:id="UCON6" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.rowIndex="6" />
+            <Circle fx:id="UCON5" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.rowIndex="5" />
+            <Circle fx:id="UCON4" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.rowIndex="4" />
+            <Circle fx:id="UCON3" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.rowIndex="3" />
+            <Circle fx:id="UCON7" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.rowIndex="7" />
+            <Circle fx:id="UsuarioSinCubrebocas" fill="#ffffff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+            <Circle fx:id="USIN1" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Circle fx:id="USIN5" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Circle fx:id="USIN4" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Circle fx:id="USIN3" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Circle fx:id="USIN2" fill="DODGERBLUE" radius="20.0" stroke="ffffff00" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Circle fx:id="UsuarioConCubrebocas" fill="#ffffff00" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="USIN7" fill="DODGERBLUE" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Rectangle fx:id="Salon" arcWidth="5.0" fill="#9e9e9e2b" height="450.0" layoutX="800.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" style="-fx-background-radius: 10px;" width="400.0" />
+   </children>
+</AnchorPane>
